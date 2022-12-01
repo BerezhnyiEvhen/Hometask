@@ -8,13 +8,6 @@ public static void main(String[] args) {
 Scanner myObj = new Scanner(System.in);
 System.out.println("Please enter the value of degrees Celsius:");
 int celsius = myObj.nextInt();
-
-if (celsius < 0){
 System.out.println("It is " + (32 + celsius * 1.8)+ " degrees Fahrenheit");
-}else if(celsius > 0){
-System.out.println("It is " + (32 + celsius * 1.8) + " degrees Fahrenheit");
-}else if(celsius == 0){
-System.out.println("It is 32 degrees Fahrenheit" );
-}
 }
 }
