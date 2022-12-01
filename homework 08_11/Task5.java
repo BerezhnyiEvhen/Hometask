@@ -13,7 +13,7 @@ int number2 = myObj.nextInt();
 System.out.println(" ");
 if (number1 < number2){
 System.out.println("The biggest one is " + number2);
-}else if(number1 > number2){
+}else{
 System.out.println("The biggest one is " + number1);
 }
 }
