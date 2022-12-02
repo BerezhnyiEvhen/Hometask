@@ -6,23 +6,26 @@ import java.util.Scanner;
 //написать класс который выводит в консоль массив состоящий из двух елементов. 1й - кол-во  всех позитивных значений массива, 2й - сумма всех отрицательных. Массив вводится с консоли
 class Task9 {
 public static void main(String[] args) {
-double[] array = new double[10];
-double Amount=0;
-double sumNegative=0;
-for (int i = 0; i < array.length; i++) {
-array[i] = Math.random()*20-10;
-System.out.println(array[i]);
+Scanner inputScanner = new Scanner(System.in);
+System.out.println("Input the amount of elemnts of new massive: ");
+int arrayLength = inputScanner.nextInt();
+int[] inputArray = new int[arrayLength];
+System.out.println("Input the elemnts of new massive: ");
+for (int i = 0; i < arrayLength; i++) {
+inputArray[i]=inputScanner.nextInt();
 }
-System.out.println(" ");
-for (int i = 0; i < array.length; i++) {
-if(array[i]>=1){
- Amount++;
- }
- if(array[i]<0) {
-sumNegative += array[i];
+int[] resultArray=new int[2];
+int amountOfPositive=0;
+int sumOfNegative=0;
+for (int i = 0; i < arrayLength; i++) {
+if(inputArray[i]>0){
+amountOfPositive++;
+}else if(inputArray[i]<0) {
+sumOfNegative += inputArray[i];
 }
 }
-System.out.println("Amount of positive values: " + (byte)Amount);
-System.out.println("Summary of all negative values:" + sumNegative);
+resultArray[0]=amountOfPositive;
+resultArray[1]=sumOfNegative;
+System.out.println("The amount of positive values: " + amountOfPositive+" , the summary of negative values: "+sumOfNegative);
 }
 }
