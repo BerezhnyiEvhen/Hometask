@@ -1,0 +1,9 @@
+#ignore.idea.folder idea
+.idea/
+
+#ignore.class extension
+*.class
+
+out/
+
+*.iml
